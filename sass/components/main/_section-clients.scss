@@ -1,0 +1,76 @@
+.clients{
+    padding: 94px 0;
+}
+
+.clients-title{
+    @extend %title;
+    @include set_text_style(36px 700, 1.16, 0.03em);
+  
+    margin-bottom: 50px;
+}
+
+.list-clients{
+    @extend %list;
+    @include set_flex($justify-content: space-between);
+
+    width: 1170px;
+}
+
+.client-link{
+    @extend %link;
+    @include set_flex($justify-content: center, $align-items: center);
+
+    color: $client-border-svg-color;
+   
+    width: 170px;
+    height: 90px;
+
+    border: 1px solid $client-border-svg-color;
+    border-radius: 4px;
+
+    transition: color $animation-time $cubic-time-function, border-color $animation-time $cubic-time-function;
+
+    @include set_hover_and_focus();
+
+    &:hover {
+        border-color: $accent-color;
+    }
+
+}
+
+.client-link .logo-color{
+    fill: currentColor; 
+}
+
+.logo-1{
+    width: 44px;
+    height: 49px;
+}
+
+.logo-2{
+    width: 40px;
+    height: 52px;
+}
+
+.logo-3{
+    width: 41px;
+    height: 43px;
+}
+
+.logo-4{
+    width: 80px;
+    height: 42px;
+    
+}
+
+.logo-5{
+    width: 59px;
+    height: 47px;
+    
+}
+
+.logo-6{
+    width: 88px;
+    height: 45px;    
+}
+

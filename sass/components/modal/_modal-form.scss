@@ -1,0 +1,154 @@
+
+.modal-form {
+    margin-top: 2px;
+    padding: 0 40px;;
+}
+
+.modal-title {
+    @include set_text_style(20px, 700, 1.15, 0.03em);
+   
+    text-align: center;
+
+    margin: 0 0 12px 0;
+
+    color: $title-text-color;
+}
+
+.fieldset {
+    @include set_flex($justify-content: flex-start, $flex-direction: column);
+    @include set_text_style(12px, 300, 1.16, 0.01em);
+
+    color: $primary-text-color;
+
+    & label:not(:last-child) {
+        margin-bottom: 10px;
+    };
+
+
+}
+
+.input.text-area {
+    resize: none;
+    padding: 12px 16px;
+
+    &::placeholder  {
+        color: $modal-placeholder-color;
+    
+    }
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-wrapper .input{
+    width: 100%;
+    padding: 12px 0px 12px 40px;
+    margin-top: 4px;
+
+    border: 1px solid $input-border-color;
+    border-radius: 4px;
+
+    &:focus {
+        outline: none;
+        border-color: $accent-color;
+    }
+}
+
+.input-wrapper .icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+
+    transform: translateY(calc(-50% + 2px));
+
+    transition: fill $animation-time $cubic-time-function;
+
+}
+
+.input:focus + .icon {
+    fill: $accent-color;
+}
+
+.input-wrapper .icon-person {
+    width: 12px;
+    height: 12px;
+}
+
+.input-wrapper .icon-telephone {
+    width: 14px;
+    height: 14px;
+}
+
+.input-wrapper .icon-email {
+    width: 16px;
+    height: 12px;
+}
+
+
+.input-wrapper .input.text-area{       /* Переопределение паддинга для секции коммента  */
+    padding: 12px 0px 0px 16px;
+}
+
+
+.policy {
+    @include set_flex($align-items: center, $justify-content: center);
+    @include set_text_style(14px, 300, 1.71, 0.03em);
+   
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.policy .input-checkbox{
+    appearance: none;
+    position: absolute;
+}
+
+.policy a{
+    display: inline-block;
+    color: $accent-color;
+    margin-left: 4px;
+}
+
+.label-policy {
+    position: relative;
+}
+
+.label-policy::before {
+    content: '';
+
+    width: 16px;
+    height: 15px;
+
+    position: absolute;
+    top: 50%;
+    left: -22px;
+
+    transform: translateY(calc(-50% - 1px));
+
+    background-color: $primary-white-color;
+
+    border: 2px solid $checkbox-border-color;
+    border-radius: 2px;
+
+    .input-checkbox:checked + & {
+    
+        background-image: url('../images/icon_check.svg');
+        background-repeat: no-repeat;
+        
+        background-origin: border-box;
+    
+        border: none;
+    }
+
+    .input-checkbox:focus + & {
+        border: 2px solid $accent-color;
+    }
+}
+
+.modal-form .submit-button{
+    display: block;
+
+    margin: 30px auto 0 auto;
+    padding: 10px 56px;
+}

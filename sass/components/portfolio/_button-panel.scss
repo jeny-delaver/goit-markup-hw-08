@@ -1,0 +1,32 @@
+.list-button-navigation{
+    @extend %list;
+    @include set_flex($justify-content: center);  
+
+    margin-bottom: 50px;
+
+    &  > .item:not(:last-child){
+        margin-right: 8px;
+    }
+}
+
+.list-button-navigation button {
+    @include set_text_style(16px, 500, 1.6, 0.03em);
+    @include set_hover_and_focus($color: $primary-white-color, $background-color: $accent-color);
+
+    &:hover, &:focus {
+        box-shadow: 0 3px 1px $button-panel-shadow-1, 0 1px 2px $button-panel-shadow-2, 0 2px 2px $button-panel-shadow-3;
+    }
+
+    color: $title-text-color;
+    background-color: $button-panel-bg-color;
+   
+    text-align: center;
+
+    border: none;
+    border-radius: 4px;
+
+    padding: 6px 22px;
+     
+    transition: all $animation-time $cubic-time-function;
+}
+

@@ -1,0 +1,38 @@
+
+.hero {
+    background-image: linear-gradient($hero-bg-gradient-color, $hero-bg-gradient-color), url('../images/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    padding: 200px 0;
+}
+
+.hero-title {
+    @include set_text_style(44px, 900, 1.36, 0.06em);
+
+    color: $hero-title-color;
+    text-transform: uppercase;
+    
+    width: 696px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 0 auto 30px auto; */
+}
+
+.hero-button {
+    @include set_text_style(16px, 700, 1.9, 0.06em);
+    
+    color: $hero-button-color;
+    background-color: $accent-color;
+
+    padding: 10px 32px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 4px 4px $hero-button-shadow-color;
+}

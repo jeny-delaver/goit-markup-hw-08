@@ -1,0 +1,78 @@
+
+.team {
+    background-color: $team-section-bg-color;
+    padding: 94px 0;
+}
+
+.list-team{
+    @extend %list;
+    @include set_flex();
+
+    & > .item:not(:last-child){
+        margin-right: 30px;
+    }
+}
+
+.list-team > .item {
+    background-color: $team-card-bg-color;
+    width: 270px;
+
+    box-shadow: 0 1px 3px $team-card-shadow-1, 0 1px 1px $team-card-shadow-2, 0 2px 1px $team-card-shadow-3;
+    border-radius: 0 0 4px 4px;
+   
+}
+
+.team-title {
+    @extend %title; 
+    @include set_text_style(36px, 700, 1.17, 0.03em);
+   
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.member-container{
+    padding: 30px 32px;
+}
+
+.member-title {
+    @extend %title; 
+    @include set_text_style(16px, 500, 1.19, 0.03em);
+
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.member-description {
+    @include set_text_style(16px, 300, 1.19, 0.03em);
+  
+    text-align: center;  
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.icon-list{
+    @extend %list; 
+    @include set_flex($justify-content: space-around);
+}
+
+.icon-list a{
+    @extend %link; 
+    @include set_flex($justify-content: space-around, $align-items: center);
+
+    width: 44px;
+    height: 44px; 
+
+    color: $team-border-svg-color;
+    border-radius: 50%;
+   
+    transition: color $animation-time $cubic-time-function, background-color $animation-time $cubic-time-function;
+
+    @include set_hover_and_focus($color: $social-icon-color, $background-color: $accent-color);
+}
+
+.icon-list .icon{
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}

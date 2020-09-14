@@ -1,0 +1,50 @@
+
+.competence {
+    background-color: $primary-bg-color;
+    padding: 94px 0;
+}
+
+.list-competence {
+    @extend %list;
+    @include set_flex();
+
+    & > .item:not(:last-child){
+        margin-right: 30px;
+    }
+}
+
+.competence-title {
+    @extend %title;
+    @include set_text_style(36px, 700, 1.17, 0.03em);
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.competence-link {
+    @extend %link;
+
+    position: relative;
+}
+
+.description-container {
+    @include set_flex($justify-content: center, $align-items: center);
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 70px;
+   
+    background-color: $competence-description-bg-color;
+}
+
+.description-title{
+    @include set_text_style(14px, 700, 1.14, 0.03em);
+    
+    text-transform: uppercase;
+    color: $competence-description-title;
+    
+}

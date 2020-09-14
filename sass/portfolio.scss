@@ -1,0 +1,25 @@
+@import './base/normalize';
+@import './utils/variables';
+@import './utils/global-styles';
+@import './utils/mixins';
+@import './utils/placeholders';
+
+
+@import './components/header';
+
+
+.projects {
+    background-color: var(--primary-bg-color);
+    padding: 94px 0;
+}
+
+@import './components/portfolio/button-panel';
+@import './components/portfolio/project-grid';
+
+
+
+@import './components/footer';
+
+
+
+

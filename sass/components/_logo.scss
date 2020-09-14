@@ -1,0 +1,20 @@
+
+.nav-container .logo-header{
+    margin-right: 93px;
+}
+
+.logo {
+    @extend %link;
+    @include set_text_style(26px, 700, 1.19, 0.03em);
+    font-family: Raleway, sans-serif;
+  
+}
+
+.logo-header {
+    color: $logo-header-color;
+}
+
+
+.logo span {
+    color: $accent-color;
+}

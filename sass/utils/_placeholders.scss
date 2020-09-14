@@ -1,0 +1,26 @@
+%container {
+    text-align: center;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; 
+};
+
+%link {
+    display: block;
+    text-decoration: none;
+}
+
+
+%list {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+%title {
+    color: $title-text-color;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}

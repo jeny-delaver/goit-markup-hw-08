@@ -1,0 +1,155 @@
+.footer {
+    background-color: $footer-bg-color;
+    padding: 60px 0;
+}
+
+.container {
+    text-align: left;
+}
+
+
+.flex-wrap-container{
+   @include set_flex($align-items: baseline);
+
+   & > *:not(:last-child()) {
+        margin-right: 70px;
+    }
+}
+
+//  Address container
+
+.logo-footer {
+    color: $logo-footer-color;
+
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.address {
+    color: $primary-white-color;
+    @include set_text_style(14px, 500, 1.71, 0.03em);
+    
+    font-style: normal;
+}
+
+.location{
+    display: inline-block;
+    margin-bottom: 9px;
+}
+
+.email{
+    @extend %link;
+    @include set_hover_and_focus();
+
+    color: $footer-link-color;
+
+    margin-bottom: 9px;
+
+    transition: color $animation-time $cubic-time-function;
+
+}
+
+.phone-number{
+    @extend %link;
+    @include set_hover_and_focus();
+
+    color: $footer-link-color;
+
+    transition: color $animation-time $cubic-time-function;
+}
+
+//  Link container
+
+.join {
+    display: inline-block;
+    color: $primary-white-color;
+    @include set_text_style(14px, 700, 1.14, 0.03em);
+
+    margin-bottom: 20px;
+}
+
+
+.social-link-list{
+    @extend %list;
+    @include set_flex($justify-content: space-between);
+
+    & > .item:not(:last-child()){
+        margin-right: 10px;
+    }
+    
+}
+
+ .social-link{
+    @extend %link;
+    @include set_hover_and_focus($color: $social-icon-color, $background-color: $accent-color);
+
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+
+    color: $social-icon-color;
+    background-color: $background-icon-color;
+
+    border-radius: 50%;
+
+    transition: background-color $animation-time $cubic-time-function;
+}
+
+.social-link .icon {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+}
+
+// Subscribe form
+
+.subscribe-form label {
+    display: block;
+    color: $primary-white-color;
+
+    @include set_text_style(14px, 500, 1.14, 0.03em);
+
+    margin-bottom: 20px;
+}
+
+.email-input {
+    margin-right: 12px;
+    width: 358px;
+    padding: 15px 0px 15px 16px;
+    
+    background-color: $footer-bg-color;
+    color: $primary-white-color;
+
+    border: 1px solid $footer-input-border-color;
+    border-radius: 4px;
+
+    &::placeholder{
+        color: $footer-input-placeholder-color;
+    }
+}
+
+
+.submit-button {
+    @include set_flex($display: inline-flex, $align-items: center);
+    @include set_text_style(16px, 700, 1.87, 0.06em);
+
+    color: $primary-white-color;
+    background-color: $accent-color;
+
+    padding: 10px 28px;
+    
+    box-shadow: 0px 4px 4px $footer-button-shadow-color;
+    border: none;
+    border-radius: 4px;
+}
+
+.submit-button .icon {
+    fill: currentColor;
+
+    width: 24px;
+    height: 24px;
+
+    margin-left: 10px;
+}
+
