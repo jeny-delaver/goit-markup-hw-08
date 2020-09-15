@@ -1,14 +1,11 @@
 .hero {
     background-image: linear-gradient($hero-bg-gradient-color, $hero-bg-gradient-color), url('../images/hero-bg.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     
     text-align: center;
     padding: 118px 0;
 
-    @media  screen and (min-width: $breakpoint-desktop){
-        background-size: cover;
-    }
 
     @media  screen and (min-device-pixel-ratio: 2),
             screen and (min-resolution: 192dpi),
@@ -31,7 +28,6 @@
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    /* margin: 0 auto 30px auto; */
 
     @media screen and (min-width: $breakpoint-desktop){ 
         @include set_text_style(44px, 900, 1.36, 0.06em);

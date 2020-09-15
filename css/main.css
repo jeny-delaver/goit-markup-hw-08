@@ -745,15 +745,9 @@ img {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg.jpg");
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   text-align: center;
   padding: 118px 0;
-}
-
-@media screen and (min-width: 1200px) {
-  .hero {
-    background-size: cover;
-  }
 }
 
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
@@ -775,7 +769,6 @@ img {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  /* margin: 0 auto 30px auto; */
 }
 
 @media screen and (min-width: 1200px) {
