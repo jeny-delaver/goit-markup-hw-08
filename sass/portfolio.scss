@@ -1,8 +1,9 @@
+@import './utils/mixins';
+@import './utils/placeholders';
 @import './base/normalize';
 @import './utils/variables';
 @import './utils/global-styles';
-@import './utils/mixins';
-@import './utils/placeholders';
+
 
 
 @import './components/header';
@@ -10,7 +11,11 @@
 
 .projects {
     background-color: var(--primary-bg-color);
-    padding: 94px 0;
+    padding: 60px 0;
+
+    @media screen and (min-width: $breakpoint-tablet ){
+        padding: 94px 0;
+    }
 }
 
 @import './components/portfolio/button-panel';

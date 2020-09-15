@@ -13,46 +13,55 @@
 
     <header class="header">    
         <div class="container flex-wrap-container">
-            <nav class="nav-container">
-                <a class="logo-header logo" href="" lang="en">
-                    <span>Web</span>Studio
-                </a>
 
-                <ul class="site-nav">
-                    <li class="item">
-                        <a class="nav-link" href="./index.html">Студия</a>
+            <a class="logo-header logo" href="" lang="en">
+                <span>Web</span>Studio
+            </a>
+            <div class="menu-container">
+                <nav class="nav-container">
+                    <ul class="site-nav">
+                        <li class="item">
+                            <a class="nav-link" href="./index.html">Студия</a>
+                        </li>
+                        <li class="item">
+                            <a class="nav-link current" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="item">
+                            <a class="nav-link" href="">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <ul class="header-contacts">
+                    <li class="item"> 
+                            
+                        <a class="mail-link" href="mailto:info@devstudio.com">
+                            <svg class="icon-envelope">
+                                <use href="./images/sprite.svg#envelope"></use>
+                            </svg>
+              
+                            info@devstudio.com
+                        </a>
                     </li>
+                    
                     <li class="item">
-                        <a class="nav-link current" href="./portfolio.html">Портфолио</a>
-                    </li>
-                    <li class="item">
-                        <a class="nav-link" href="">Контакты</a>
+                        <a class="telephone-link" href="tel:+380961111111">
+                            <svg class="icon-smarthphone">
+                                <use href="./images/sprite.svg#smartphone"></use>
+                            </svg>
+                            +380961111111
+                        </a>
                     </li>
                 </ul>
-            </nav>
+            </div>
 
-            <ul class="header-contacts">
-                <li class="item"> 
-                        
-                    <a class="mail-link" href="mailto:info@devstudio.com">
-                        <svg class="icon-envelope">
-                            <use href="./images/sprite.svg#envelope"></use>
-                        </svg>
-          
-                        info@devstudio.com
-                    </a>
-                </li>
-                
-                <li class="item">
-                    <a class="telephone-link" href="tel:+380961111111">
-                        <svg class="icon-smarthphone">
-                            <use href="./images/sprite.svg#smartphone"></use>
-                        </svg>
-                        +380961111111
-                    </a>
-                </li>
-            </ul>
-        </div>
+            <button data-menu-button class="menu-button">
+                <svg width="40" height="40">
+                    <use class="icon-menu" href='./images/sprite.svg#mobile-menu'></use>
+                    <use class="icon-close is-hidden" href='./images/sprite.svg#mobile-close'></use>
+                </svg>
+            </button>
+        </div>    
 
     </header>
 
@@ -310,7 +319,7 @@
             
          </div>           
 
-         <form action="" class="subscribe-form">
+         <form class="subscribe-form">
                     
             <label for="email"> <b>ПОДПИШИТЕСЬ НА РАССЫЛКУ</b></label>
             <input type="email" placeholder="E-mail" id="email" name="email-footer" class="email-input">
@@ -325,7 +334,8 @@
              
         </div>
      </footer>
-     
+
+     <script src="./js/mobile-menu.js"></script>
     
 </body>
 </html>

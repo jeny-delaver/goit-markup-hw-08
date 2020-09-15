@@ -3,20 +3,36 @@
     padding: 60px 0;
 }
 
-.container {
-    text-align: left;
-}
+.footer .container {
+    text-align: center;
 
-
-.flex-wrap-container{
-   @include set_flex($align-items: baseline);
-
-   & > *:not(:last-child()) {
-        margin-right: 70px;
+    @media screen and (min-width: $breakpoint-desktop){ 
+        text-align: left;
     }
 }
 
+.footer .flex-wrap-container{
+    @media screen and (min-width: $breakpoint-tablet){ 
+        @include set_flex($flex-wrap: wrap, $justify-content: space-around);
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop){ 
+        @include set_flex($align-items: baseline, $justify-content: space-around);
+
+    }
+   
+}
+
+
 //  Address container
+
+.address-container{
+
+    @media screen and (max-width: $breakpoint-tablet - 1){ 
+       margin-bottom: 60px;
+    }
+}
 
 .logo-footer {
     color: $logo-footer-color;
@@ -60,6 +76,15 @@
 
 //  Link container
 
+.link-container{
+
+    @media screen and (max-width: $breakpoint-tablet - 1){ 
+       margin-bottom: 60px;
+    }
+
+}
+
+
 .join {
     display: inline-block;
     color: $primary-white-color;
@@ -72,6 +97,9 @@
 .social-link-list{
     @extend %list;
     @include set_flex($justify-content: space-between);
+
+    width: 206px;
+    margin: 0 auto;
 
     & > .item:not(:last-child()){
         margin-right: 10px;
@@ -104,6 +132,23 @@
 
 // Subscribe form
 
+.subscribe-form {
+
+    
+
+    @media screen and (max-width: $breakpoint-tablet - 1){ 
+        padding: 0px 15px;
+        
+     }
+
+
+    @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){ 
+        
+        margin-top: 60px;
+     }
+
+}
+
 .subscribe-form label {
     display: block;
     color: $primary-white-color;
@@ -114,8 +159,6 @@
 }
 
 .email-input {
-    margin-right: 12px;
-    width: 358px;
     padding: 15px 0px 15px 16px;
     
     background-color: $footer-bg-color;
@@ -126,6 +169,22 @@
 
     &::placeholder{
         color: $footer-input-placeholder-color;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet - 1){ 
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $breakpoint-tablet){ 
+        width: 450px;
+       
+    }
+
+
+    @media screen and (min-width: $breakpoint-desktop){ 
+        width: 358px;
+        margin-right: 12px;
     }
 }
 
@@ -142,6 +201,17 @@
     box-shadow: 0px 4px 4px $footer-button-shadow-color;
     border: none;
     border-radius: 4px;
+
+    @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){ 
+        @include set_flex($display: flex, $align-items: center);
+        margin: 20px auto 0 auto;
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop ){ 
+        @include set_flex($display: inline-flex, $align-items: center);
+
+    }
 }
 
 .submit-button .icon {

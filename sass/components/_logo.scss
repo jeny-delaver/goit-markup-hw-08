@@ -1,12 +1,26 @@
 
-.nav-container .logo-header{
-    margin-right: 93px;
+.logo-header{
+    @media screen and (min-width: $breakpoint-tablet){
+        margin-right: 88px;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop){
+        margin-right: 93px;
+    }
+    
 }
 
 .logo {
-    @extend %link;
-    @include set_text_style(26px, 700, 1.19, 0.03em);
+    //@extend %link;
+    display: inline-block;
+    text-decoration: none;
+
     font-family: Raleway, sans-serif;
+    @include set_text_style(24px, 700, 1.16, 0.03em);
+    
+    @media screen and (min-width: $breakpoint-desktop){
+        @include set_text_style(26px, 700, 1.19, 0.03em);
+    } 
   
 }
 

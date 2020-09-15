@@ -1,6 +1,3 @@
-@import './mixins';
-@import './variables';
-
 body {
     color: $primary-text-color;
 
@@ -12,14 +9,32 @@ img {
     display: block;
 }
 
+
 .container {
     text-align: center;
     /* outline: 3px solid red; */
-    width: $main-container-width;
-    margin: 0 auto;
-    padding: 0 15px; 
+    
+    @media screen and (min-width: $breakpoint-mobile){
+        width: $breakpoint-mobile;
+        margin: 0 auto;
+        
+    }
+
+    @media screen and (min-width: $breakpoint-tablet){
+        width: $breakpoint-tablet;
+        text-align: left;
+       
+    }
+
+    @media screen and (min-width: $breakpoint-desktop){
+        width: $breakpoint-desktop;
+    }
+
 }
 
 .flex-wrap-container{
-    @include set_flex();
+   
+    @media screen and (min-width: $breakpoint-tablet){
+        @include set_flex();
+    }
 }

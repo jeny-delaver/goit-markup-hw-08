@@ -1,28 +1,33 @@
 
+
 .hero {
     background-image: linear-gradient($hero-bg-gradient-color, $hero-bg-gradient-color), url('../images/hero-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    max-width: 1600px;
-    margin: 0 auto;
-
+    // max-width: 1600px;
+    
     text-align: center;
-
-    padding: 200px 0;
+    padding: 118px 0;
+    
 }
 
 .hero-title {
-    @include set_text_style(44px, 900, 1.36, 0.06em);
+    @include set_text_style(26px, 900, 1.61, 0.06em);
 
     color: $hero-title-color;
     text-transform: uppercase;
     
-    width: 696px;
+    width: 100%;
     margin-top: 0;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
     /* margin: 0 auto 30px auto; */
+
+    @media screen and (min-width: $breakpoint-desktop){ 
+        @include set_text_style(44px, 900, 1.36, 0.06em);
+    }
+
 }
 
 .hero-button {

@@ -1,14 +1,61 @@
+
 .advantages {
     background-color: $primary-bg-color;
-    padding-top: 94px;
+    padding: 60px 0;
+
+    @media screen and (min-width: $breakpoint-desktop){ 
+        padding-top: 94px;
+    }
+   
+}
+
+.advantages-section-title {
+    display: none;
 }
 
 .list-advantages{
     @extend %list;
-    @include set_flex();
+   
+    padding: 0px 15px;
 
-    & > .item:not(:last-child) {
-        margin-right: 30px;
+    @media screen and (min-width: $breakpoint-tablet){ 
+        @include set_flex($flex-wrap: wrap);
+
+    }
+
+    @media screen and (min-width: $breakpoint-desktop){ 
+       
+        @include set_flex();
+
+    }
+
+}
+
+.list-advantages .item{
+   
+    @media screen and (max-width: $breakpoint-tablet - 1){ 
+        padding: 0px 15px;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){  
+        width: calc((100% - 30px)/2);
+       
+        &:not(:nth-last-of-type(-n + 2)) {
+            margin-bottom: 30px;
+        }
+
+        &:not(:nth-of-type(2n)) {
+            margin-right: 30px;
+       }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop){ 
+        width: 100%;
+        &:not(:last-child()) {
+            margin-right: 30px;
+       }
+
     }
 }
 
@@ -16,9 +63,13 @@
     @include set_flex($justify-content: center, $align-items: center);
     background-color: $advantages-icon-bg-color;
 
-    width: 270px;
-    height: 120px;
+    width: 100%;
+    padding: 25px 0px;
+
     margin-bottom: 30px;
+    
+    border-radius: 4px;
+    
 }
 
 .icon-advantages{
@@ -39,4 +90,6 @@
 
     margin-top: 0;
     margin-bottom: 0;
+
+    text-align: left;
 }

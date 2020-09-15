@@ -5,13 +5,17 @@
 }
 
 .modal-title {
-    @include set_text_style(20px, 700, 1.15, 0.03em);
+    @include set_text_style(20px, 700, 1.5, 0.03em);
    
     text-align: center;
 
     margin: 0 0 12px 0;
 
     color: $title-text-color;
+
+    @media screen and (max-width: $breakpoint-desktop - 1){ 
+        @include set_text_style(20px, 700, 1.15, 0.03em);
+    }
 }
 
 .fieldset {
@@ -97,6 +101,10 @@
    
     margin-top: 20px;
     margin-left: 20px;
+
+    @media screen and (max-width: $breakpoint-desktop - 1){ 
+        @include set_text_style(12px, 300, 1.16, 0.03em);
+    }
 }
 
 .policy .input-checkbox{

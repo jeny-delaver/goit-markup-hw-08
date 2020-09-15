@@ -1,25 +1,9 @@
+@import './utils/mixins';
+@import './utils/placeholders';
 @import './base/normalize';
 @import './utils/variables';
 @import './utils/global-styles';
-@import './utils/mixins';
-@import './utils/placeholders';
 
-// .link {
-//     display: block;
-//     text-decoration: none;
-// }
-
-// .container {
-//     text-align: center;
-//     /* outline: 3px solid red; */
-//     width: 1200px;
-//     margin: 0 auto;
-//     padding: 0 15px; 
-// }
-
-// .container.container-text-left{
-//     text-align: left;
-// }
 
 @import './components/header';
 

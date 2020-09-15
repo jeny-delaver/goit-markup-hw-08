@@ -1,25 +1,63 @@
+// .team  * {
+//     outline: 2px solid teal;
+// }
 
 .team {
     background-color: $team-section-bg-color;
-    padding: 94px 0;
+    padding: 60px 0;
+
+    @media screen and (min-width: $breakpoint-tablet){ 
+        padding: 94px 0;
+    }
 }
 
 .list-team{
     @extend %list;
-    @include set_flex();
+    padding: 0px 15px;
 
-    & > .item:not(:last-child){
-        margin-right: 30px;
+    @media screen and (min-width: $breakpoint-tablet){ 
+        @include set_flex($flex-wrap: wrap);
     }
+    
 }
 
 .list-team > .item {
     background-color: $team-card-bg-color;
-    width: 270px;
+    width: 100%;
 
     box-shadow: 0 1px 3px $team-card-shadow-1, 0 1px 1px $team-card-shadow-2, 0 2px 1px $team-card-shadow-3;
     border-radius: 0 0 4px 4px;
-   
+
+    @media screen and (max-width: $breakpoint-tablet - 1){ 
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop - 1){ 
+        width: calc((100% - 30px)/2);
+       
+        &:not(:nth-last-of-type(-n + 2)) {
+            margin-bottom: 30px;
+        }
+
+        &:not(:nth-of-type(2n)) {
+            margin-right: 30px;
+       }
+    }
+
+    @media screen and (min-width: $breakpoint-desktop){ 
+        width: calc((100% - 3*30px)/4);
+        
+        &:not(:last-child()) {
+            margin-right: 30px;
+        }
+    }
+       
+}
+
+.member-image {
+    width: 100%;
 }
 
 .team-title {
@@ -27,7 +65,11 @@
     @include set_text_style(36px, 700, 1.17, 0.03em);
    
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $breakpoint-tablet){ 
+        margin-bottom: 50px;
+    }
 }
 
 
@@ -54,6 +96,13 @@
 .icon-list{
     @extend %list; 
     @include set_flex($justify-content: space-around);
+
+    width: 106px;
+    margin: 0 auto;
+
+    @media screen and (min-width: $breakpoint-tablet){ 
+        width: 206px;
+    }
 }
 
 .icon-list a{
