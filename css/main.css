@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .nav-link, .mail-link,
 .telephone-link, .competence-link, .icon-list a, .client-link, .email, .phone-number, .social-link {
   display: block;
@@ -276,6 +275,7 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 .container {
@@ -745,9 +745,22 @@ img {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-bg.jpg");
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   text-align: center;
   padding: 118px 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-size: cover;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/2x/hero-bg_2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/2x/hero-bg_2x.jpg");
+  }
 }
 
 .hero-title {
@@ -1448,27 +1461,6 @@ img {
   margin-bottom: 10px;
 }
 
-.input.text-area {
-  resize: none;
-  padding: 12px 16px;
-}
-
-.input.text-area::-webkit-input-placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.input.text-area:-ms-input-placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.input.text-area::-ms-input-placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.input.text-area::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
 .input-wrapper {
   position: relative;
 }
@@ -1515,9 +1507,32 @@ img {
   height: 12px;
 }
 
-.input-wrapper .input.text-area {
-  /* Переопределение паддинга для секции коммента  */
-  padding: 12px 0px 0px 16px;
+.input.text-area {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  padding: 12px 16px;
+}
+
+.input.text-area::-webkit-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.input.text-area:-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.input.text-area::-ms-input-placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.input.text-area::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.input.text-area:focus {
+  outline: none;
+  border-color: #2196f3;
 }
 
 .policy {

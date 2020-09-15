@@ -276,6 +276,7 @@ body {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 .container {
@@ -922,7 +923,7 @@ img {
 }
 
 .example-image {
-  width: inherit;
+  width: 100%;
 }
 
 .example-content-thumb {
