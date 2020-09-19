@@ -1,32 +1,19 @@
 .header {
     background-color: $primary-bg-color;
-    border-bottom: 3px solid $header-border-bottom-color;       
+    border-bottom: 1px solid $header-border-bottom-color;       
 
     margin: 0 auto;
     
+    
     @media screen and (max-width: $breakpoint-tablet - 1){
-        position: relative;    
-        padding: 16px 15px;
+        position: relative;   
+        padding: 16px 0px; 
+        
     }
 
-
-    @media screen and (min-width: $breakpoint-mobile){
-        width: $breakpoint-mobile;
-    }
-
-    @media screen and (min-width: $breakpoint-tablet){
-        width: $breakpoint-tablet;
-        padding: 0px 15px;
-    }
-
-    @media screen and (min-width: $breakpoint-desktop){
-        width: $breakpoint-desktop;
-        padding: 0px 25px;
-    }
 }
 
 .header .flex-wrap-container {
-    width: 100%;
     @include set_flex($align-items: center);
 }
 
@@ -34,7 +21,7 @@
 .menu-container {
     display: none;
 
-    z-index: 1; // for portfolio.html mobile version
+    z-index: 1; // for portfolio.html mobile version 
 
     &.is-open {
         display: block;

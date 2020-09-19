@@ -1,8 +1,12 @@
 
+// .list-project-examples * {
+//     outline: 3px solid red; 
+// }
+
 .list-project-examples{
     @extend %list;
 
-    padding: 0px 15px;
+    // padding: 0px 15px;
 
     @media screen and (max-width: $breakpoint-tablet - 1){
         display: block;
@@ -32,6 +36,10 @@
 
     @media screen and (min-width: $breakpoint-desktop){
         @include set_flex($flex-wrap: wrap);
+
+        & > .item {
+            width: calc((100% - 60px) / 3);
+        };
 
         & > .item:not(:nth-of-type(3n)) {
             margin-right: 30px;

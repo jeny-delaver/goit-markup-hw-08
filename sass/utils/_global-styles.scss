@@ -3,6 +3,8 @@ body {
 
     font-family: Roboto, sans-serif;
     font-style: normal;
+
+    
 }
 
 img {
@@ -10,25 +12,25 @@ img {
     max-width: 100%;
 }
 
-
 .container {
     text-align: center;
-    /* outline: 3px solid red; */
+    margin: 0 auto;
+    // outline: 3px solid red; 
     
     @media screen and (min-width: $breakpoint-mobile){
-        width: $breakpoint-mobile;
-        margin: 0 auto;
+        width: calc(#{$breakpoint-mobile} - 15px);            // -15px для вертикального скролл бара
+        
         
     }
 
     @media screen and (min-width: $breakpoint-tablet){
-        width: $breakpoint-tablet;
-        text-align: left;
+        width: calc(#{$breakpoint-tablet} - 15px);
+        // text-align: left;
        
     }
 
     @media screen and (min-width: $breakpoint-desktop){
-        width: $breakpoint-desktop;
+        width: calc(#{$breakpoint-desktop} - 15px);
     }
 
 }
