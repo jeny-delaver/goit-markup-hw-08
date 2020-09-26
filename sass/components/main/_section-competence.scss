@@ -43,13 +43,13 @@
     width: 100%;
     height: 70px;
    
-    background-color: $competence-description-bg-color;
+    background-color: $primary-bg-color;
 }
 
 .description-title{
     @include set_text_style(14px, 700, 1.14, 0.03em);
     
     text-transform: uppercase;
-    color: $competence-description-title;
+    color: $primary-white-color;
     
 }

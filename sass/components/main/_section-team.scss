@@ -3,7 +3,7 @@
 // }
 
 .team {
-    background-color: $team-section-bg-color;
+    background-color: $second-bg-color;
     padding: 60px 0;
 
     @media screen and (min-width: $breakpoint-tablet){ 
@@ -22,10 +22,10 @@
 }
 
 .list-team > .item {
-    background-color: $team-card-bg-color;
+    background-color: $primary-bg-color;
     width: 100%;
 
-    box-shadow: 0 1px 3px $team-card-shadow-1, 0 1px 1px $team-card-shadow-2, 0 2px 1px $team-card-shadow-3;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 1px  rgba(0, 0, 0, 0.14), 0 2px 1px  rgba(0, 0, 0, 0.2);
     border-radius: 0 0 4px 4px;
 
     @media screen and (max-width: $breakpoint-tablet - 1){ 
@@ -112,12 +112,12 @@
     width: 44px;
     height: 44px; 
 
-    color: $team-border-svg-color;
+    color: $border-svg-color;
     border-radius: 50%;
    
     transition: color $animation-time $cubic-time-function, background-color $animation-time $cubic-time-function;
 
-    @include set_hover_and_focus($color: $social-icon-color, $background-color: $accent-color);
+    @include set_hover_and_focus($color: $primary-white-color, $background-color: $accent-color);
 }
 
 .icon-list .icon{

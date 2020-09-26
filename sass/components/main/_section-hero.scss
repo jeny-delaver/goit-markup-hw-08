@@ -19,7 +19,7 @@
 .hero-title {
     @include set_text_style(26px, 900, 1.61, 0.06em);
 
-    color: $hero-title-color;
+    color: $primary-white-color;
     text-transform: uppercase;
     
     width: 100%;
@@ -37,11 +37,11 @@
 .hero-button {
     @include set_text_style(16px, 700, 1.9, 0.06em);
     
-    color: $hero-button-color;
+    color: $primary-white-color;
     background-color: $accent-color;
 
     padding: 10px 32px;
     border-radius: 4px;
     border: none;
-    box-shadow: 0 4px 4px $hero-button-shadow-color;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }

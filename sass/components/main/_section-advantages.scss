@@ -61,7 +61,7 @@
 
 .icon-container-advantages{
     @include set_flex($justify-content: center, $align-items: center);
-    background-color: $advantages-icon-bg-color;
+    background-color: $second-bg-color;
 
     width: 100%;
     padding: 25px 0px;

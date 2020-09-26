@@ -70,7 +70,7 @@
     transition: box-shadow $animation-time $cubic-time-function;
 
     &:hover, &:focus {
-        box-shadow: 0 1px 1px $project-example-link-shadow-1, 0 4px 4px $project-example-link-shadow-2, 1px 4px 6px $project-example-link-shadow-3;
+        box-shadow: 0 1px 1px  rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px  rgba(0, 0, 0, 0.16);
     }
 }
 

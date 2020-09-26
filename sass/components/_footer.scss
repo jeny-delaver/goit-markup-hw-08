@@ -35,7 +35,7 @@
 }
 
 .logo-footer {
-    color: $logo-footer-color;
+    color: $primary-white-color;
 
     display: inline-block;
     margin-bottom: 20px;
@@ -109,14 +109,14 @@
 
  .social-link{
     @extend %link;
-    @include set_hover_and_focus($color: $social-icon-color, $background-color: $accent-color);
+    @include set_hover_and_focus($color: $primary-white-color, $background-color: $accent-color);
 
     display: inline-block;
     width: 44px;
     height: 44px;
     padding: 12px;
 
-    color: $social-icon-color;
+    color: $primary-white-color;
     background-color: $background-icon-color;
 
     border-radius: 50%;
@@ -168,7 +168,7 @@
     border-radius: 4px;
 
     &::placeholder{
-        color: $footer-input-placeholder-color;
+        color: $footer-link-color;
     }
 
     @media screen and (max-width: $breakpoint-tablet - 1){ 
@@ -198,7 +198,7 @@
 
     padding: 10px 28px;
     
-    box-shadow: 0px 4px 4px $footer-button-shadow-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);;
     border: none;
     border-radius: 4px;
 
